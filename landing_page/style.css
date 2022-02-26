@@ -49,6 +49,7 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
+    align-items: flex-start;
 }
 
 #intro-main {
@@ -64,8 +65,9 @@ body {
 }
 
 #intro-img {
-    flex: 1 1 0;
-    /* width: ; */
+    flex: 1;
+    height: 200px;
+    width: auto;
     
 }
 
