@@ -42,6 +42,7 @@ body {
 #hero-sub {
     display: flex;
     margin: 30px;
+    column-gap: 30px;
 
 }
 
@@ -59,16 +60,14 @@ body {
     flex: 1
 }
 
-#intro-sub {
+#intro-sub-text {
     font-size: 18px;
     color: #e5e7eb;
 }
 
 #intro-img {
     flex: 1;
-    height: 200px;
-    width: auto;
-    
+    max-width:400px;
 }
 
 
@@ -98,6 +97,7 @@ button {
 
 #info img {
     height: 100px;
+    width: auto;
 }
 
 #info .item {
