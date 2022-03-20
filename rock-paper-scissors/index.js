@@ -4,7 +4,7 @@ function computerChoice() {
 }
 
 function getUserChoice() {
-    return prompt("1 for rock, 2 for paper, 3 for scissors")
+    return prompt("rock/paper/scissors").toLowerCase()
 }
 
 
