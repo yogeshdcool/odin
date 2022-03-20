@@ -1,22 +1,52 @@
-// FizzBuzz
-// get input as a number
-// loop from 1 - number 
-// if number%3=Fizz
-// if number%5=Buzz
-// if number%3&&number&5=FizzBuzz
-// n=parseInt(prompt("Enter a number"))
-n = 15;
-for (let i = 1; i <= n; i++) {
-    if (i % 3 == 0 && i % 5 == 0) {
-        console.log("FizzBuzz")
+function computerChoice() {
+    const choices = ["rock", "paper", "scissors"]
+    return choices[Math.floor(Math.random() * 3)]
+}
+
+function getUserChoice() {
+    return prompt("1 for rock, 2 for paper, 3 for scissors")
+}
+
+
+function check(comp, player) {
+    if (comp === player) {
+        console.log("Tie");
+        return
     }
-    else if (i % 3 == 0) {
-        console.log("Fizz");
+    else if (player === "rock") {
+        if (comp === "paper") {
+            console.log("rock is catched by paper,so you lose");
+        }
+        else {
+            console.log("rock breaks scissors,so you win");
+        }
+        return
     }
-    else if (i % 5 == 0) {
-        console.log("Buzz");
-    }
-    else {
-        console.log(i);
+    else if (player === "paper") {
+        if (comp === "rock") {
+            console.log("paper catches rock,so you win");
+        }
+        else {
+            console.log("paper is cut by paper,so you lose");
+        }
+        return
+    } else if (player === "scissors") {
+        if (comp === "rock") {
+            console.log("scissors is broke by rock,so you lose");
+        }
+        else {
+            console.log("scissors cuts paper,so you win");
+        }
+        return
+
     }
 }
+
+function play(n = 5) {
+    for (let i = 0; i < n; i++) {
+
+        check(computerChoice(), getUserChoice())
+    }
+}
+
+play()
